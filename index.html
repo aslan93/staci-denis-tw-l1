@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <script type="text/javascript" src="quizTestJSON.js"></script>
+  <meta charset="utf-8" />
+  <title>QuitzTest</title>
+ </head>
+ <body>
+  <script type="text/javascript">
+    var questionText = quizTestObj.questionText; //Объявляю переменные
+    var answerFirst = quizTestObj.answerFirst;
+    var answerSecond = quizTestObj.answerSecond;
+    var answerThird = quizTestObj.answerThird;
+    var answerFourth = quizTestObj.answerFourth;
+    var rightAnswer = quizTestObj.rightAnswer;
+    var moneyWon = quizTestObj.moneyWon;
+    var toBreak = false;
+    var moneyCheckpoint = "0$"
+    var countOfJSON = quizTestObj.questionText.length;
+
+    function userQuestion(i) {
+            userAnswer = prompt("Вопрос: " + questionText[i] + "\n" + "Ответы: " + "\n" + answerFirst[i] + "\n" + answerSecond[i] + "\n" + answerThird[i] + "\n" + answerFourth[i]) //Задаёт вопрос
+            if (userAnswer.toLowerCase() == rightAnswer[i]) {
+                if (i == (countOfJSON - 1)) {
+                    alert("Поздравляем с победой! Миллион ваш!");
+                    downloadJSON(JSON.stringify(addDateToReturnObj(), null, '\t'), 'quizTWA.json', 'text/plain');
+                } else {
+                    var toContinue = confirm("Правильный ответ! Будете продолжать игру?")
+                    if (!toContinue) {
+                        alert("В таком случае, вы выиграли " + moneyWon[i])
+                        toBreak = true;
+                        return 0;
+                    } else {
+                        alert("Хорошо, идём дальше...")
+                    }
+                }
+            } else {
+                alert('Ответ неправильный! Вы выигрываете ' + moneyCheckpoint + "\n" + "Правильный ответ: " + rightAnswer[i]);
+                downloadJSON(JSON.stringify(addDateToReturnObj(), null, '\t'), 'quizTWA.json', 'text/plain');
+                toBreak = true
+                
+            }
+    }
+        for (var i = 0; i < countOfJSON; i++) {
+            userQuestion(i)
+            if (i == 2) { //Если это 3 ...
+                moneyCheckpoint = moneyWon[i]
+            }
+            if (toBreak) {
+                break;
+            }
+        }
+
+
+        function downloadJSON(text, name, type) {
+		    var a = document.createElement("a");
+		    var file = new Blob([text], {type: type});
+		    a.href = URL.createObjectURL(file);
+		    a.download = name;
+		    a.click();
+		}
+
+
+
+
+//template
+        function addDateToReturnObj(){
+			var returnObj = {
+			  1:{
+			    question: "",
+			    time: "",
+			    answers:{
+			      correct:{
+			        text:""
+			      },
+			      response:{
+			        text:""
+			      }
+			    } 
+			  }
+			}
+
+			returnObj[1].question = 'prima intrebare';
+			  return returnObj;
+			}
+  </script>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
