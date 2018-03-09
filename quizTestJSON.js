@@ -1,54 +1,53 @@
 var quizTestObj = {
 			questionText:[
-			"Что такое Fortran",
-			"В какой стране есть доступ к всего 28 сайтам?",
-
-			"Жители какой страны славятся своим запутанным кодом?",
-			"Какой самый популярный поисковик из перечисленных?",
-			"Чем отличается C и C++?"
+			"Ce componenta poate fi asimilata creierului unui computer?",
+			"Tastatura sau mouse-ul se conecteaza la portul:",
+			"Ce este HDD?",
+			"Hard diskul si CD-ul contin memorie:",
+			"Monitorul LCD este unul de tip:"
 			],
 			answerFirst:[
-				"a) Антивирус",
-				"а) Папуа-Новая Гвинея",
-				"а) США",
-				"а) Google",
-				"а) Плюсиками"
+				"a) Memoria Ram",
+				"a) Wifi",
+				"a) Hard drive",
+				"a) Secreta",
+				"a) LED"
 			],
 			answerSecond:[
-				"б) Австралийское блюдо",
-				"б) Северная Корея",
-				"б) Китай",
-				"б) Yandex",
-				"б) Названием"
+				"b) Procesorul",
+				"b) PS/2",
+				"b) Network card",
+				"b) Permanenta",
+				"b) Clasic"
 			],
     		answerThird:[
-    			"в) Первый  высокоуровневый язык программирования",
-    			"в) Россия",
-    			"в) Япония",
-    			"в) Yahoo",
-    			"в) Ничем"
+    			"c) Placa Video",
+    			"c) LPT",
+    			"c) Floppy drive",
+    			"c) Temporara",
+    			"c) Cu cristale lichide"
     		],
     		answerFourth:[
-    			"г) Интернет-браузер",
-    			"г) Уругвай",
-    			"г) Индия",
-    			"г) DuckDuckGo",
-    			"г) Во втором есть ООП"
+    			"d) Placa de Baza",
+    			"d) RJ45",
+    			"d) Expansion card",
+    			"d) Interna",
+    			"d) Plasma"
     		],
     		rightAnswer:[
-    			"в",
-    			"б",
-    			"г",
-    			"а",
-    			"г"
+    			"b",
+    			"b",
+    			"a",
+    			"b",
+    			"c"
 
     		],
     		moneyWon:[
-    			"100$",
-    			"200$",
-    			"300$",
-    			"500$",
-    			"1000$"
+    			"100",
+    			"200",
+    			"300",
+    			"500",
+    			"1000"
 
     		]
 		}
